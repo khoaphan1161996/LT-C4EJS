@@ -1,0 +1,61 @@
+/*1 tag selector */
+h1 {
+    color:blue;
+}
+
+p {
+    background-color: brown;
+}
+/*2 id selector: duy nhất 1 id */
+#frist_h1 {
+    text-decoration: underline;
+}
+/*3 class selector: có thể dùng nhiều thẻ hoặc ăn trên nhiều class */
+.italic {
+    font-style: italic;
+}
+
+.white {
+    color: white;
+}
+/*4 attribute selector */
+[href] {
+    font-size: 60px;
+}
+
+[type="password"] {
+    border: solid green 2px;
+}
+/*5 and selector */
+.italic, .white{}
+
+.italic, #frist_h1{}
+/*6 child selector
+ ăn vào thẻ a con của nav , nếu có nav>a thì sẽ chỉ ăn trong thẻ a con của nav ko ăn vào thẻ a cháu của nav con của span */
+nav a {
+    text-decoration: line-through;
+}
+
+ul li {}
+/*7 direct child selector */
+nav > a {
+    font-weight: bold ;
+}
+
+ul > li {}
+/*8 các tag selector hay dùng */
+button:active {      /*sẽ chỉ hoạt động khi người dùng click vào */
+    background-color: greenyellow;
+}
+
+input:focus {        /*sẽ chỉ hoạt động khi người dùng nhập vào */
+    border: black solid 4px;
+}
+
+img {                 /*thu nhỏ hình xuống */
+    width: 40%;
+}
+
+img:hover {           /*hover là khi di chuột vào hình nó thay đổi */
+    border: gray 1px solid;
+}

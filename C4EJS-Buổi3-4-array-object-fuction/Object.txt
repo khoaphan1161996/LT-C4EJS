@@ -1,0 +1,76 @@
+1. Các biến được khai báo trước khi được gán
+   var person = {name: "Sarah", country: "Nigeria", job: "Developer"};
+
+    var {name, friends, job} = person;
+
+    console.log(name);//"Sarah"
+    console.log(friends);//undefined
+
+2. Sử dụng một tên biến mới
+ var person = {name: "Sarah", country: "Nigeria", job: "Developer"};
+
+    var {name: foo, job: bar} = person;
+
+    console.log(foo);//"Sarah"
+    console.log(bar);//"Developer"
+
+3. Sử dụng giá trị mặc định
+ var person = {name: "Sarah", country: "Nigeria", job: "Developer"};
+
+    var {name:foo = "myName", friend: bar = "Annie"} = person;
+
+    console.log(foo);//"Sarah"
+    console.log(bar);//"Annie"
+
+4. Kết hợp Mảng với Đối tượng
+var person = {name: "Sarah", country: "Nigeria", friends: ["Annie", "Becky"]};
+
+    var {name:foo, friends: bar} = person;
+
+    console.log(foo);//"Sarah"
+    console.log(bar);//["Annie", "Becky"]
+
+5. Làm tổ trong cấu trúc đối tượng
+  var person = {
+        name: "Sarah",
+        place: {
+            country: "Nigeria", 
+            city: "Lagos" }, 
+        friends : ["Annie", "Becky"]
+        };
+
+    var {name:foo,
+         place: {
+             country : bar,
+             city : x}
+          } = person;
+
+    console.log(foo);//"Sarah"
+    console.log(bar);//"Nigeria"
+
+6. Phục hồi trong cấu trúc đối tượng
+ var person = {name: "Sarah", country: "Nigeria", job: "Developer" friends: ["Annie", "Becky"]};
+
+    var {name, friends, ...others} = person;
+
+    console.log(name);//"Sarah"
+    console.log(friends);//["Annie", "Becky"]
+    console.log(others);// {country: "Nigeria", job: "Developer"}
+
+7. Cấu trúc đối tượng và chức năng
+function person({name: x, job: y} = {}) {
+        console.log(x);
+    }
+
+    person({name: "Michelle"});//"Michelle"
+    person();//undefined
+    person(friend);//Error : friend is not defined
+
+    Lưu ý {}ở phía bên tay phải của đối tượng tham số. Nó giúp chúng ta có thể gọi một hàm mà không cần truyền đối số. Đó là lý do tại sao chúng tôi có undefined. Nếu chúng tôi xóa nó, chúng tôi sẽ nhận được thông báo lỗi.
+Chúng tôi cũng có thể gán giá trị mặc định cho các tham số.
+    
+    function person({name: x = "Sarah", job: y = "Developer"} = {}) {
+        console.log(x);
+    }
+
+    person({name});//"Sarah"

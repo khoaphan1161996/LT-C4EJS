@@ -1,0 +1,40 @@
+I.
+1. What are var and const in JavaScript?
+- var: Phạm vi của một biến được xác định với từ khóa “var” được giới hạn trong “hàm” mà nó được định nghĩa. Nếu nó được định nghĩa bên ngoài bất kỳ hàm nào, phạm vi của biến là toàn cục.
+var là "phạm vi chức năng".
+
+- const: Phạm vi của một biến được xác định với từ khóa “const” được giới hạn trong khối được xác định bởi dấu ngoặc nhọn. Tuy nhiên, nếu một biến được xác định với từ khóa const, thì nó không thể được gán lại.
+“Const” không thể được gán lại cho một giá trị mới. Tuy nhiên nó CÓ THỂ bị đột biến.
+
+2.What are the differences between let and var?
+- var và let giống nhau, đều dùng để khai báo biến. var là phiên bản lỗi thời của let, var khai báo biến toàn cục, let khai báo biến cục bộ
+- let ko thể thoát khỏi Scope(ngoặc {}), var ko bị giới hạn bởi scope
+- let thường được dùng trong hoàn cảnh cần độ chính xác và code dễ đọc, var ít đc sd hơn let
+- Các biến var có thể được khai báo lại và cập nhật, let có thể được cập nhật nhưng không được khai báo lại.
+
+3.	What are the differences between let and const?
+- const là viết tắt constant (hằng số), hoạt động gần giống let,  tạo ra một hằng số , một biến bất biến có giá trị không thể thay đổi.
+- const rất tốt, giữ nguyên giá trị ko đổi, coder thường đặt biến bằng const trước
+- let có thể được cập nhật nhưng không được khai báo lại., const không thể được cập nhật hoặc khai báo lại
+
+4.	What to use in what cases?
+- var: Phạm vi của một biến được xác định với từ khóa “var” được giới hạn trong “hàm” mà nó được định nghĩa. Nếu nó được định nghĩa bên ngoài bất kỳ hàm nào, phạm vi của biến là toàn cục.
+var là "phạm vi chức năng".
+
+- const: Phạm vi của một biến được xác định với từ khóa “const” được giới hạn trong khối được xác định bởi dấu ngoặc nhọn. Tuy nhiên, nếu một biến được xác định với từ khóa const, thì nó không thể được gán lại.
+“Const” không thể được gán lại cho một giá trị mới. Tuy nhiên nó CÓ THỂ bị đột biến.
+
+- let: Phạm vi của một biến được xác định bằng từ khóa “let” hoặc “const” được giới hạn trong “khối” được xác định bởi dấu ngoặc nhọn tức là {}.
+“Let” và “const” là “phạm vi khối”.
+
+II.
+1. Boolean là gì?
+- Kiểu Boolean trong JavaScript mô tả một trong hai giá trị: true (đúng) hoặc false (sai). 
+- Ta có thể sử dụng hàm Boolean() để xác định xem một biểu thức (hoặc một biến) có đúng hay không
+- Booleans Cũng Là Đối Tượng
+Ví dụ, trong JavaScript, điều kiện Boolean thường sử dụng để quyết định đoạn mã nào được thực thi (như trong lệnh if) hay lặp lại (trong vòng lặp for).
+2. Giá Trị Boolean
+Thông thường, trong lập trình, ta sẽ cần một kiểu dữ liệu mà chỉ có thể là một trong hai giá trị, ví dụ như:
+YES / NO (CÓ / KHÔNG)
+ON / OFF (BẬT / TẮT)
+TRUE / FALSE (ĐÚNG / SAI)

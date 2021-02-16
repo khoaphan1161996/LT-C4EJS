@@ -1,0 +1,46 @@
+1. Basic Destructuring
+    Cách 1:
+var introduction = ["Hello", "I" , "am", "Sarah"];
+    var [greeting, pronoun] = introduction;
+    console.log(greeting);//"Hello"
+    console.log(pronoun);//"I"
+    Cách 2:
+var [greeting, pronoun] = ["Hello", "I" , "am", "Sarah"];
+    console.log(greeting);//"Hello"
+    console.log(pronoun);//"I"
+
+2.  Declaring Variables before Assingment
+ var greeting, pronoun;
+    [greeting, pronoun] = ["Hello", "I" , "am", "Sarah"];
+    console.log(greeting);//"Hello"
+    console.log(pronoun);//"I"
+
+3. Skipping Items in an Array
+var [greeting,,,name] = ["Hello", "I" , "am", "Sarah"];
+    console.log(greeting);//"Hello"
+    console.log(name);//"Sarah"
+
+var [,pronoun,,name] = ["Hello", "I" , "am", "Sarah"];
+    console.log(pronoun);//"I"
+    console.log(name);//"Sarah"
+
+4. Assigning the rest of an array
+var [greeting,...intro] = ["Hello", "I" , "am", "Sarah"];
+    console.log(greeting);//"Hello"
+    console.log(intro);//["I", "am", "Sarah"]
+
+5. Destructuring Assignment with Functions
+function getArray() {
+        return ["Hello", "I" , "am", "Sarah"];
+    } 
+    var[greeting,pronoun] = getArray();
+
+    console.log(greeting);//"Hello"
+    console.log(pronoun);//"I"
+
+6. Using Default Values:
+Giá trị mặc định có thể được gán cho các biến trong trường hợp giá trị được trích xuất từ ​​mảng là undefined
+
+ var[greeting = "hi",name = "Sarah"] = ["hello"];
+    console.log(greeting);//"Hello"
+    console.log(name);//"Sarah
